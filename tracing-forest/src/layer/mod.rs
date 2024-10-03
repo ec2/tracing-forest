@@ -7,7 +7,6 @@ use crate::tree::{self, FieldSet, Tree};
 use chrono::Utc;
 use std::fmt;
 use std::io::{self, Write};
-use std::time::Instant;
 use tracing::field::{Field, Visit};
 use tracing::span::{Attributes, Id};
 use tracing::{Event, Subscriber};
@@ -17,6 +16,7 @@ use tracing_subscriber::util::SubscriberInitExt;
 use tracing_subscriber::util::TryInitError;
 #[cfg(feature = "uuid")]
 use uuid::Uuid;
+use web_time::Instant;
 #[cfg(feature = "uuid")]
 pub(crate) mod id;
 

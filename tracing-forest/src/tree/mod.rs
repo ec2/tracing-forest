@@ -9,11 +9,11 @@ use crate::tag::Tag;
 use chrono::{DateTime, Utc};
 #[cfg(feature = "serde")]
 use serde::Serialize;
-use std::time::Duration;
 use thiserror::Error;
 use tracing::Level;
 #[cfg(feature = "uuid")]
 use uuid::Uuid;
+use web_time::Duration;
 
 mod field;
 #[cfg(feature = "serde")]

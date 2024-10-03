@@ -2,8 +2,8 @@ use crate::tree::FieldSet;
 #[cfg(feature = "chrono")]
 use chrono::{DateTime, Utc};
 use serde::ser::{SerializeMap, Serializer};
-use std::time::Duration;
 use tracing::Level;
+use web_time::Duration;
 
 #[allow(clippy::trivially_copy_pass_by_ref)]
 pub(super) fn level<S: Serializer>(level: &Level, serializer: S) -> Result<S::Ok, S::Error> {
